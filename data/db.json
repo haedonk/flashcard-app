@@ -1,0 +1,45 @@
+{
+  "decks": [
+    {
+      "name": "React Router",
+      "description": "React Router is a collection of navigational components that compose declaratively with your application.",
+      "id": 2
+    },
+    {
+      "name": "Haedon Kaufman",
+      "description": "sdfgsdfg",
+      "id": 3
+    },
+    {
+      "name": "asdf",
+      "description": "asdfasdf",
+      "id": 4
+    }
+  ],
+  "cards": [
+    {
+      "front": "sdfg",
+      "back": "sdfgsdfg",
+      "deckId": 2,
+      "id": 6
+    },
+    {
+      "front": "",
+      "back": "",
+      "deckId": 4,
+      "id": 7
+    },
+    {
+      "front": "xcvbxcvb",
+      "back": "",
+      "deckId": 2,
+      "id": 8
+    },
+    {
+      "front": "dfgh",
+      "back": "dfghd",
+      "deckId": 2,
+      "id": 9
+    }
+  ]
+}
