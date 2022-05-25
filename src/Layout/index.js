@@ -10,8 +10,8 @@ import Study from "./Study";
 import CreateDeck from "./CreateDeck";
 import Deck from "./Deck";
 import EditDeck from "./EditDeck"
-import AddCards from "./AddCards"
-import EditCard from "./EditCard"
+import AddOrEdit from "./AddOrEdit";
+import EditCard from "./EditCard";
 
 
 function Layout() {
@@ -45,10 +45,10 @@ function Layout() {
             <EditDeck setDeck={setDeck} deck={deck}/>
           </Route>
           <Route path="/decks/:deckId/cards/new">
-            <AddCards setDeck={setDeck} deck={deck}/>
+            <AddOrEdit setDeck={setDeck} deck={deck}/>
           </Route>
           <Route path="/decks/:deckId/cards/:cardId/edit">
-            <EditCard setDeck={setDeck} deck={deck}/>
+            <AddOrEdit setDeck={setDeck} deck={deck}/>
           </Route>
           <Route>
             <NotFound />
