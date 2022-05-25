@@ -11,7 +11,6 @@ import CreateDeck from "./CreateDeck";
 import Deck from "./Deck";
 import EditDeck from "./EditDeck"
 import AddOrEdit from "./AddOrEdit";
-import EditCard from "./EditCard";
 
 
 function Layout() {
