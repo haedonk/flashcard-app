@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack://src/style.css"],"names":[],"mappings":"AAIA,sBACI,qBAAsB,CACtB,aAAqB,CACrB,YACJ","file":"main.d6deb934.chunk.css","sourcesContent":["\r\n\r\n\r\n\r\n.mainDecks, .studyCard{\r\n    border:1px solid black;\r\n    margin: 10px 0 10px 0;\r\n    padding: 10px;\r\n}"]}
