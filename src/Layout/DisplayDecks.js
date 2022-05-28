@@ -29,13 +29,13 @@ function DisplayDecks({decks, setDecks}){
 
     const disDecks = decks.map(deck => {
         return (
-            <div className="mainDecks">
+            <div key={deck.id} className="mainDecks">
                 <h3>{deck.name}</h3>
                 <p>{deck.cards.length} cards</p>
                 <p>{deck.description}</p>
-                <Link to={`/decks/${deck.id}`} ><button class="btn btn-secondary mr-2">View</button></Link>
-                <Link to={`/decks/${deck.id}/study`}><button class="btn btn-primary mr-2">Study</button></Link>
-                <button onClick={() => deleteHandler(deck.id)} class="btn btn-danger">Delete</button>
+                <Link to={`/decks/${deck.id}`} ><button className="btn btn-secondary mr-2">View</button></Link>
+                <Link to={`/decks/${deck.id}/study`}><button className="btn btn-primary mr-2">Study</button></Link>
+                <button onClick={() => deleteHandler(deck.id)} className="btn btn-danger">Delete</button>
             </div>
         );
     })

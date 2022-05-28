@@ -70,19 +70,19 @@ function AddOrEdit({setDeck, deck}) {
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item"><Link to="/" >Home</Link></li>
-                        <li class="breadcrumb-item"><Link >Deck {deck.name}</Link></li>
+                        <li class="breadcrumb-item"><a >Deck {deck.name}</a></li>
                         <li class="breadcrumb-item active" aria-current="page">Edit Card {cardId}</li>
                     </ol>
                 </nav>
                 <h2>Edit Card</h2>
                 <form onSubmit={handleSubmit}>
                     <div class="form-group">
-                        <label for="frontTextArea">Front</label>
+                        <label htmlFor="frontTextArea">Front</label>
                         <textarea type="text" class="form-control" id="front" 
                         placeholder={card.front} rows="2" onChange={handleFrontChange} value={front}></textarea>
                     </div>
                     <div class="form-group">
-                        <label for="back">Back</label>
+                        <label htmlFor="back">Back</label>
                         <textarea type="backTextArea" class="form-control" id="back" 
                         placeholder={card.back} rows="2" onChange={handleBackChange} value={back}></textarea>
                     </div>

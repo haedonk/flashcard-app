@@ -21,7 +21,7 @@ function StudyCards({cards, cardNum, side, setSide, setCardNum, deck}){
             <div className="studyCard">
                 <h3>Card {cardNum+1} of {cards.length}</h3>
                 <FrontBack side={side} card={cards[cardNum]}/>
-                <Link><button onClick={flip}>Flip</button></Link>
+                <button onClick={flip}>Flip</button>
                 <StudyNextCard setCardNum={setCardNum} side={side} cardNum={cardNum} flip={flip} cards={cards}/>
             </div>
             )
@@ -33,7 +33,7 @@ function StudyCards({cards, cardNum, side, setSide, setCardNum, deck}){
             <div className="atLeast3">
                 <h2>Not enough cards.</h2>
                 <p>You need at least 3 cards to study. There is/are {cards.length} card(s) in this deck.</p>
-                <Link to={`/decks/${deck.id}/cards/new`}><button type="button" class="btn btn-primary mr-2"><span>&#43;</span>Add Cards</button></Link>
+                <Link to={`/decks/${deck.id}/cards/new`}><button type="button" className="btn btn-primary mr-2"><span>&#43;</span>Add Cards</button></Link>
             </div>
         )
     }

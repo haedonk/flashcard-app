@@ -3,7 +3,7 @@ import { Link} from "react-router-dom";
 
 
 function CreateDeckButton(){
-    return <Link to={"/decks/new"}><button type="button" class="btn btn-secondary"><span>&#43;</span>Create Deck</button></Link>
+    return <Link to={"/decks/new"}><button type="button" className="btn btn-secondary"><span>&#43;</span>Create Deck</button></Link>
 }
 
 export default CreateDeckButton;

@@ -6,10 +6,10 @@ function StudyBreadCrumbs({deck}){
     return (
         <div>
             <nav aria-label="breadcrumb">
-                <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><Link to="/" >Home</Link></li>
-                    <li class="breadcrumb-item"><Link>{deck.name}</Link></li>
-                    <li class="breadcrumb-item active" aria-current="page">Study</li>
+                <ol className="breadcrumb">
+                    <li className="breadcrumb-item"><Link to="/" >Home</Link></li>
+                    <li className="breadcrumb-item"><a>{deck.name}</a></li>
+                    <li className="breadcrumb-item active" aria-current="page">Study</li>
                 </ol>
             </nav>
         </div>

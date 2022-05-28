@@ -3,7 +3,6 @@ import {Link} from "react-router-dom";
 import { updateDeck } from "../utils/api";
 import { useHistory , useParams} from "react-router-dom";
 import { readDeck } from "../utils/api";
-import CreateDeckButton from "./CreateDeckButton";
 
 
 
@@ -13,10 +12,13 @@ function EditDeck({setDeck, deck}){
     const {deckId} = params;
 
 
-    const [name, setName] = useState(deck.name);
-    const [description, setDescription] = useState(deck.description);
+
+
+    const [name, setName] = useState("");
+    const [description, setDescription] = useState("");
     const handleNameChange = (event) => setName(event.target.value);
     const handleDescriptionChange = (event) => setDescription(event.target.value);
+    
 
     useEffect(() => {
         const abortController = new AbortController();
@@ -25,9 +27,10 @@ function EditDeck({setDeck, deck}){
             const response = await readDeck(deckId, abortController.signal);
 
             setDeck(response);
+            setName(response.name);
+            setDescription(response.description);
         }
         loadDeck();
-
         return () => abortController.abort();
     }, []);
 
@@ -45,26 +48,26 @@ function EditDeck({setDeck, deck}){
     return (
         <div>
             <nav aria-label="breadcrumb">
-                <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><Link to="/" >Home</Link></li>
-                    <li class="breadcrumb-item"><Link >{deck.name}</Link></li>
-                    <li class="breadcrumb-item active" aria-current="page">Edit Deck</li>
+                <ol className="breadcrumb">
+                    <li className="breadcrumb-item"><Link to="/" >Home</Link></li>
+                    <li className="breadcrumb-item"><a >{deck.name}</a></li>
+                    <li className="breadcrumb-item active" aria-current="page">Edit Deck</li>
                 </ol>
             </nav>
             <h1>Edit Deck</h1>
             <form onSubmit={handleSubmit}>
-                <div class="form-group">
-                    <label for="nameInput">Name</label>
-                    <input type="text" class="form-control" id="name" placeholder={deck.name} onChange={handleNameChange} value={deck.name}/>
+                <div className="form-group">
+                    <label htmlFor="nameInput">Name</label>
+                    <input type="text" className="form-control" id="name" placeholder={deck.name} onChange={handleNameChange} value={name}/>
                 </div>
-                <div class="form-group">
-                    <label for="descriptionInput">Description</label>
-                    <textarea type="text" class="form-control" id="description" 
-                    placeholder={deck.description} rows="4" onChange={handleDescriptionChange} value={deck.description}></textarea>
+                <div className="form-group">
+                    <label htmlFor="descriptionInput">Description</label>
+                    <textarea type="text" className="form-control" id="description" 
+                    placeholder={deck.description} rows="4" onChange={handleDescriptionChange} value={description}></textarea>
                 </div>
 
-                <Link to={`/decks/${deck.id}`}><button type="button" class="btn btn-secondary mr-2">Cancel</button></Link>
-                <button type="submit" class="btn btn-primary">Submit</button>
+                <Link to={`/decks/${deck.id}`}><button type="button" className="btn btn-secondary mr-2">Cancel</button></Link>
+                <button type="submit" className="btn btn-primary">Submit</button>
             </form>
         </div>
     )

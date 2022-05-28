@@ -9,23 +9,12 @@
       "name": "Haedon Kaufman",
       "description": "sdfgsdfg",
       "id": 3
-    },
-    {
-      "name": "asdf",
-      "description": "asdfasdf",
-      "id": 4
     }
   ],
   "cards": [
     {
-      "front": "",
-      "back": "",
-      "deckId": 4,
-      "id": 7
-    },
-    {
-      "front": "fgxcvvb",
-      "back": "",
+      "front": "sdfgsd",
+      "back": "dfgsd",
       "id": 9,
       "deckId": 2
     },

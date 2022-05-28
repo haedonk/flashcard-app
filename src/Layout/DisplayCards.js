@@ -1,4 +1,4 @@
-import React, {useEffect} from "react";
+import React from "react";
 import {Link, useHistory} from "react-router-dom";
 import { deleteCard } from "../utils/api";
 
@@ -15,13 +15,13 @@ function DisplayCards({cards, setCards}){
     
     const displayCards = cards.map(card=>{
         return(
-            <div class="border border-dark my-3 p-3">
-                <div class="row">
-                    <p class="col">{card.front}</p>
-                    <p class="col">{card.back}</p>
+            <div key={card.id} className="border border-dark my-3 p-3">
+                <div className="row">
+                    <p className="col">{card.front}</p>
+                    <p className="col">{card.back}</p>
                 </div>
-                <Link to={`/decks/${card.deckId}/cards/${card.id}/edit`}><button type="button" class="btn btn-secondary mr-2">Edit</button></Link>
-                <button type="button" class="btn btn-danger" onClick={() => deleteCardHandler(card.id)}>Delete</button>
+                <Link to={`/decks/${card.deckId}/cards/${card.id}/edit`}><button type="button" className="btn btn-secondary mr-2">Edit</button></Link>
+                <button type="button" className="btn btn-danger" onClick={() => deleteCardHandler(card.id)}>Delete</button>
             </div>
         )
     })
@@ -32,7 +32,7 @@ function DisplayCards({cards, setCards}){
 
     if(cards.length > 0){
         return (
-            <div class="mt-4">
+            <div className="mt-4">
                 <h3>Cards</h3>
                 {displayCards}
             </div>
