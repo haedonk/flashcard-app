@@ -36,7 +36,7 @@ function EditCard({setDeck, deck}){
 
 
         return () => abortController.abort();
-    }, []);
+    }, [cardId, deckId, setDeck]);
 
     const handleSubmit = (event) => {
         event.preventDefault();
@@ -58,7 +58,7 @@ function EditCard({setDeck, deck}){
                     <nav aria-label="breadcrumb">
                         <ol className="breadcrumb">
                             <li className="breadcrumb-item"><Link to="/" >Home</Link></li>
-                            <li className="breadcrumb-item"><a >Deck {deck.name}</a></li>
+                            <li className="breadcrumb-item"><button className="btn btn-link">Deck {deck.name}</button></li>
                             <li className="breadcrumb-item active" aria-current="page">Edit Card {cardId}</li>
                         </ol>
                     </nav>

@@ -24,7 +24,7 @@ function Study({decks, deck, setDeck, cards, setCards}){
         loadDeck();
 
         return () => abortController.abort();
-    }, []);
+    }, [deckId, setCards, setDeck]);
     
 
 

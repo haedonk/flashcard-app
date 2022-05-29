@@ -5,7 +5,7 @@ import { useHistory } from "react-router-dom";
 
 
 
-function CreateDeck({decks, newDeck}){
+function CreateDeck({decks}){
     const history = useHistory();
     const [name, setName] = useState("");
     const [description, setDescription] = useState("");

@@ -17,7 +17,7 @@ function DisplayDecks({decks, setDecks}){
         loadDecks();
 
         return () => abortController.abort();
-    }, []);
+    }, [setDecks]);
 
     function deleteHandler(id) {
         if(window.confirm("Delete this deck?\n\nYou will not be able to recover it.")){
